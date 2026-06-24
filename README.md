@@ -199,3 +199,9 @@ takemeter/
 ├── evaluation_results.json             # Baseline vs fine-tuned comparison
 └── confusion_matrix.png                # Fine-tuned model confusion matrix
 ```
+
+---
+
+## Demo Video
+
+[Watch the demo video](https://www.loom.com/share/0bb21f4da95c49fb8c5bf588a84766f6)

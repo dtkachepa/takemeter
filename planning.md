@@ -134,11 +134,3 @@ A result below these thresholds is still a valid project outcome — the evaluat
 **Failure analysis:**
 
 - After fine-tuning, I will export the list of wrong predictions from the test set and give them to an AI tool with the following prompt: "Here are comments my classifier got wrong. Each has the true label and the predicted label. Identify any systematic pattern in the errors — for example, does the model consistently confuse short hot_takes with reactions, or misclassify analysis when no numbers are present?" I will then verify the AI-identified pattern manually by checking whether at least 3 of the wrong predictions fit the pattern before including it in the evaluation report.
-
-## Stretch Features
-
-- **Inter-annotator reliability:** have at least one other person label 30+ examples independently, then report Cohen's kappa and analyze disagreements.
-- **Deployed interface:** a simple app that accepts a new post, runs it through the fine-tuned classifier, and displays the predicted label and confidence score.
-
-## * Hypothesis for zero shot model *
-The zero-shot model struggles to recognize analysis because it doesn't know this community's specific signals — stat citations, tactical comparisons, head-to-head records. It defaults to hot_take when unsure between the two. It also over-fires on reaction for short dismissive comments that are actually hot_takes. Fine-tuning on our 147 training examples should improve analysis recall specifically, and tighten the hot_take/reaction boundary.
